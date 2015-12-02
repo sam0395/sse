@@ -1,0 +1,16 @@
+{
+    "name": "root/sse",
+    "description": "SSE",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Brandon Bronisz",
+            "email": "bbroni1@live.spcollege.edu"
+        },
+        {
+            "name": "Sam Belcastro",
+            "email": "Sam0395@yahoo.com"
+        }
+    ],
+    "require": {}
+}
