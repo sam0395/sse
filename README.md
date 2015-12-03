@@ -9,8 +9,13 @@ prerequisites
 
 Installing
 ------
-1. First run composer update in the project directory to install latest dependancies. 
-2. Then add a virual host to XAMPP in the file ``` httpd-vhosts.conf ```
+
+#### Composer
+<p>After installing composer, the first thing your going to want to do is install SSE's dependancies. <br>
+To do this, you must ``` cd ``` into the project's root directory.<br>
+Then, run ``` composer install ``` which will install all of the latest dependancies.</p>
+
+<p>Then add a virual host to XAMPP at the end of the file ``` httpd-vhosts.conf ``` (On mac, this is found under ``` /Applications/XAMPP/xamppfiles/etc/extra/httpd-vhosts.conf ```)</p>
 
 ```xml
 # SSE host
@@ -24,3 +29,4 @@ Installing
     </Directory>
 </VirtualHost>
 ```
+4. Be sure to also add 
