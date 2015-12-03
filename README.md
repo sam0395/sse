@@ -15,7 +15,23 @@ After installing composer, the first thing your going to want to do is install S
 To do this,``` cd ``` into the project's root directory.<br>
 Then, run ``` composer install ``` which will install all of the latest dependancies.
 
-<p>Then add a virual host to XAMPP at the end of the file ``` httpd-vhosts.conf ``` (On mac, this is found under ``` /Applications/XAMPP/xamppfiles/etc/extra/httpd-vhosts.conf ```)</p>
+#### Xampp
+
+In order to get SSE up and running, were going to have to setup virtualhosts. This will make it possible to change the directory from ``` sse/ ``` to ``` sse/public```. <br>
+
+The first thing you’ll need to do is open the file ```httpd.conf``` (on mac, this is found at``` /Applications/XAMPP/xamppfiles/etc/httpd.conf ```). Look for the following lines:<br>
+
+```xml
+# Virtual hosts
+#Include /Applications/XAMPP/etc/extra/httpd-vhosts.conf
+```
+
+Uncomment the second line by removing the hash (#), so that Apache loads your custom VirtualHosts configuration file:<br>
+
+```xml
+# Virtual hosts
+Include /Applications/XAMPP/etc/extra/httpd-vhosts.conf
+```
 
 ```xml
 # SSE host
