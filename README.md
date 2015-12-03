@@ -38,8 +38,8 @@ Include /Applications/XAMPP/etc/extra/httpd-vhosts.conf
 # localhost
 <VirtualHost *:80>
     ServerName localhost
-    DocumentRoot "/Applications/XAMPP/xamppfiles/htdocs"
-    <Directory "/Applications/XAMPP/xamppfiles/htdocs">
+    DocumentRoot "/Applications/XAMPP/xamppfiles/htdocs" # Be sure to change this to your htdocs folder
+    <Directory "/Applications/XAMPP/xamppfiles/htdocs"> # and this
         Options Indexes FollowSymLinks Includes execCGI
         AllowOverride All
         Require all granted
@@ -53,13 +53,13 @@ This step is necessary to ensure that http://localhost still points at XAMPP’s
 ```xml
 # SSE host
 <VirtualHost *:80>
-    ServerName sse.app
-    DocumentRoot "/path/to/your/site/public/" 
-    <Directory "/path/to/your/site/public/">
+    ServerName sse.app # this will be the url to access SSE on XAMPP
+    DocumentRoot "/path/to/your/site/public/" # don't forget to change this to your projects public folder 
+    <Directory "/path/to/your/site/public/"> # and also here
         Options Indexes FollowSymLinks Includes ExecCGI
         AllowOverride All
         Require all granted
     </Directory>
 </VirtualHost>
 ```
-4. Be sure to also add 
+
