@@ -2,7 +2,7 @@ SSE
 ======
 Society of Sales Engineers content managment system
 
-prerequisites
+Prerequisites
 ------
 * Composer, which you can install from [getcomposer.com](getcomposer.com)
 * XAMPP, with a bit of configuration
@@ -15,7 +15,7 @@ After installing composer, the first thing your going to want to do is install S
 * To do this,``` cd ``` into the project's root directory.<br>
 * Then, run ``` composer install ``` which will install all of the latest dependancies.
 
-#### Xampp
+#### XAMPP
 
 In order to get SSE up and running, were going to have to setup virtualhosts. This will make it possible to change the directory from ``` sse/ ``` to ``` sse/public```. <br>
 
@@ -48,11 +48,13 @@ Include /Applications/XAMPP/etc/extra/httpd-vhosts.conf
 ```
 This step is necessary to ensure that http://localhost still points at XAMPP’s htdocs directory once we’ve created our custom VirtualHosts.
 
+* Now we can add SSE's virtualhost by adding the following code below:
+
 ```xml
 # SSE host
 <VirtualHost *:80>
     ServerName sse.app
-    DocumentRoot "/path/to/your/site/public/"
+    DocumentRoot "/path/to/your/site/public/" 
     <Directory "/path/to/your/site/public/">
         Options Indexes FollowSymLinks Includes ExecCGI
         AllowOverride All
