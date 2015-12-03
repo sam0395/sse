@@ -12,5 +12,10 @@
             "email": "Sam0395@yahoo.com"
         }
     ],
-    "require": {}
+    "require": {},
+    "autoload": {
+        "psr-4": {
+            "SSE\\": "lib/"
+        }
+    }
 }
