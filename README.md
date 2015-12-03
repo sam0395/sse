@@ -63,3 +63,17 @@ This step is necessary to ensure that http://localhost still points at XAMPP’s
 </VirtualHost>
 ```
 
+Once you’ve saved your httpd.conf and httpd-vhosts.conf files, the next step is to edit your OS X hosts file so it knows how to handle your new ServerName. The hosts file is used by OS X to map hostnames to IP addresses. In this case we want to map your new ServerName to the IP address 127.0.0.1, which is your localhost.
+
+* on a mac, Fire up a Terminal instance, and at the prompt type the following command:
+
+```terminal 
+sudo nano /etc/hosts
+```
+
+* Use your keyboard’s arrow keys to navigate to the bottom of the file and add your own mapping:
+
+```terminal
+127.0.0.1 sse.app
+```
+
