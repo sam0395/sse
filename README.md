@@ -48,14 +48,14 @@ Include /Applications/XAMPP/etc/extra/httpd-vhosts.conf
 ```
 This step is necessary to ensure that http://localhost still points at XAMPP’s htdocs directory once we’ve created our custom VirtualHosts.
 
-* Now we can add SSE's virtualhost by adding the following code below:
+* Now we can add SSE's virtualhost by adding the following code below. Take note of ```ServerName```, this is the url used to access the project instead of ```http://localhost/path/to/sse/public```. Be sure to change the ```DocumentRoot``` to the public directory of SSE. Do the same for the following line.
 
 ```xml
 # SSE host
 <VirtualHost *:80>
-    ServerName sse.app # this will be the url to access SSE on XAMPP
-    DocumentRoot "/path/to/your/site/public/" # don't forget to change this to your projects public folder 
-    <Directory "/path/to/your/site/public/"> # and also here
+    ServerName sse.app
+    DocumentRoot "/path/to/your/site/public/"
+    <Directory "/path/to/your/site/public/">
         Options Indexes FollowSymLinks Includes ExecCGI
         AllowOverride All
         Require all granted
