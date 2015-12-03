@@ -32,14 +32,14 @@ In order to get SSE up and running, were going to have to setup virtualhosts. Th
 # Virtual hosts
 Include /Applications/XAMPP/etc/extra/httpd-vhosts.conf
 ```
-* Now you will need to find and edit the file ```httpd-vhosts.conf``` (on mac, this is found at```/Applications/XAMPP/xamppfiles/etc/extra/httpd-vhosts.conf```). Scroll all the way to the bottom and add : 
+* Now you will need to find and edit the file ```httpd-vhosts.conf``` (on mac, this is found at```/Applications/XAMPP/xamppfiles/etc/extra/httpd-vhosts.conf```). Add the following code below at the bottom. Be sure to change ```DocumentRoot``` to the directory of htdocs. do the same for the following line. 
 
 ```xml 
 # localhost
 <VirtualHost *:80>
     ServerName localhost
-    DocumentRoot "/Applications/XAMPP/xamppfiles/htdocs" # Be sure to change this to your htdocs folder
-    <Directory "/Applications/XAMPP/xamppfiles/htdocs"> # and this
+    DocumentRoot "/Applications/XAMPP/xamppfiles/htdocs"
+    <Directory "/Applications/XAMPP/xamppfiles/htdocs">
         Options Indexes FollowSymLinks Includes execCGI
         AllowOverride All
         Require all granted
