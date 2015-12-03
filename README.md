@@ -13,7 +13,7 @@ Installing
 #### Composer
 After installing composer, the first thing your going to want to do is install SSE's dependancies. <br>
 * To do this,``` cd ``` into the project's root directory.<br>
-* Then, run ``` composer install ``` which will install all of the latest dependancies.
+* Then, run ``` composer install ``` which will install all of the latest dependancies along with the ```vendor``` folder.
 
 #### XAMPP
 
