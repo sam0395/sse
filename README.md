@@ -77,3 +77,10 @@ sudo nano /etc/hosts
 127.0.0.1 sse.app
 ```
 
+Save and close the file by pressing ```control+x```, type ```yes```, and press ```enter```.
+
+* Restart Apache
+
+#### What's Next
+Navigate over to your browser and go to ```http://sse.app/``` and that's it.
+
