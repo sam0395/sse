@@ -1,9 +1,9 @@
 <?php
 
 /*
-* load bootstrap
+* Autoload all the classes
 */
 
-require_once '../bootstrap/autoload.php';
+require_once dirname(__FILE__) . '../bootstrap/autoload.php';
 
 ?>
