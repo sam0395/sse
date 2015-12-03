@@ -1,6 +1,17 @@
 <?php
-// Including global autoloader
+
+/*
+|------------------------------------------------------------
+| Register The Composer Auto Loader
+|------------------------------------------------------------
+|
+| Composer provides an autoloader that we can use to load all of our classes
+|
+*/
+
 require_once dirname(__FILE__) . '../../vendor/autoload.php';
+
+
 
 //config array
 $config = array();
@@ -19,5 +30,7 @@ $config['db'] = array(
     'password' => 'bbbb1111',
     'name'     => 'db_name',
 );
+
+$DB = new DB;
 
 ?>
