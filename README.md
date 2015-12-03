@@ -11,22 +11,22 @@ Installing
 ------
 
 #### Composer
-After installing composer, the first thing your going to want to do is install SSE's dependancies. <br>
+* After installing composer, the first thing your going to want to do is install SSE's dependancies. <br>
 To do this,``` cd ``` into the project's root directory.<br>
 Then, run ``` composer install ``` which will install all of the latest dependancies.
 
 #### Xampp
 
-In order to get SSE up and running, were going to have to setup virtualhosts. This will make it possible to change the directory from ``` sse/ ``` to ``` sse/public```. <br>
+* In order to get SSE up and running, were going to have to setup virtualhosts. This will make it possible to change the directory from ``` sse/ ``` to ``` sse/public```. <br>
 
-The first thing you’ll need to do is open the file ```httpd.conf``` (on mac, this is found at``` /Applications/XAMPP/xamppfiles/etc/httpd.conf ```). Look for the following lines:<br>
+* The first thing you’ll need to do is open the file ```httpd.conf``` (on mac, this is found at``` /Applications/XAMPP/xamppfiles/etc/httpd.conf ```). Look for the following lines:<br>
 
 ```xml
 # Virtual hosts
 #Include /Applications/XAMPP/etc/extra/httpd-vhosts.conf
 ```
 
-Uncomment the second line by removing the hash (#), so that Apache loads your custom VirtualHosts configuration file:<br>
+* Uncomment the second line by removing the hash (#), so that Apache loads your custom VirtualHosts configuration file:<br>
 
 ```xml
 # Virtual hosts
