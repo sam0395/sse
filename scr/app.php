@@ -21,13 +21,20 @@ class App
 	const VERSION = "1.0";
 
 	/**
+	* The name of the application
+	*
+	* @var string
+	*/
+	protected $name;
+
+	/**
      *	Setup variables
      *
      * @return void
      */
-	public function __construct()
+	public function __construct($name)
 	{
-
+		self::setName($name);
 	}
 
 	/**
@@ -39,6 +46,26 @@ class App
 	{
 		return static::VERSION;
 	}
+
+	/**
+	* Get the application name
+	*
+	* @var string
+	*/
+	public function getName()
+	{
+		return $this->name;
+	}
+
+	/**
+	* Set the application name
+	*
+	* @var string
+	*/
+	public function setName($name)
+	{
+		return $this->name = $name;
+	}		
 }
 
 ?>

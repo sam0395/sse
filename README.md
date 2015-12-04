@@ -4,7 +4,7 @@ Society of Sales Engineers content managment system
 
 Prerequisites
 ------
-* Composer, which you can install from [getcomposer.com](getcomposer.com)
+* Composer, which you can install from [getcomposer.org](http://www.getcomposer.org)
 * XAMPP, with a bit of configuration
 
 Installing
