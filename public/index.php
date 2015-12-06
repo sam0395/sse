@@ -20,7 +20,7 @@ require_once dirname(__FILE__) . '/../bootstrap/autoload.php';
 |
 */
 
-$app = new sse\App\App('App');
+$app = new Trace\App\App('Trace');
 
 echo 'welcome to <i>' . $app->getName() . '</i>, version ' . $app->getVersion();
 
