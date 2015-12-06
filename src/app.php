@@ -18,7 +18,7 @@ class App
 	*
 	* @var string
 	*/
-	const VERSION = "1.0";
+	const VERSION = "0.0.1";
 
 	/**
 	* The name of the application
