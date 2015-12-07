@@ -1,13 +1,10 @@
 <?php 
 namespace Trace\App;
 
-/*
-|------------------------------------------------------------
-| Application Instance
-|------------------------------------------------------------
-|
-| Initialize a new instance of app to construct the application
-|
+/**
+* Application class
+*
+* @return app instance
 */
 
 class App
@@ -41,6 +38,7 @@ class App
 	* Get the application version
 	*
 	* @var string
+	* @return version
 	*/
 	public function getVersion()
 	{
