@@ -26,10 +26,5 @@ $class = new Trace\App\Inspector('Trace\App\App');
 
 echo 'welcome to <i>' . $app->getName() . '</i>, version ' . $app->getVersion() . '<br><br>';
 
-echo "<b>Get the metadata (return param) for App class:</b><br>";
-var_dump($class->getClassMeta());
-echo "<br>";
-echo '<b>Get the metadata for the method getVersion:</b><br>';
-var_dump($class->getMethodMeta('getVersion'));
-echo '<br>';
+$base = new Trace\App\Base();
 ?>
