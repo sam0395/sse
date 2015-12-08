@@ -1,12 +1,12 @@
 <?php
 
-use sse\App;
+use Trace\Core;
 
 class AppTest extends PHPUnit_Framework_TestCase {
 	
 	public function testApp()
 	{
-		$app = new App\App;
+		$app = new Trace\Core\App;
 
 		echo $app->env;
 	}
