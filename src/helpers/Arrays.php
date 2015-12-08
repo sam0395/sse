@@ -1,5 +1,5 @@
 <?php
-namespace Trace\App;
+namespace Trace\Core\Helpers;
 
 class Arrays
 {

@@ -20,7 +20,8 @@
     },
     "autoload": {
         "psr-4": {
-            "Trace\\App\\": ["src", "src/helpers"]
+            "Trace\\Core\\": "src",
+            "Trace\\Core\\Helpers\\": "src/helpers"
         }
     }
 }

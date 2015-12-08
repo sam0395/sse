@@ -1,8 +1,8 @@
 <?php
-namespace Trace\App;
+namespace Trace\Core\Helpers;
 
-use Trace\App\Strings as Strings;
-use Trace\App\Arrays as Arrays;
+use Trace\Core\Helpers\Strings as Strings;
+use Trace\Core\\Helpers\Arrays as Arrays;
 
 /*
 |------------------------------------------------------------

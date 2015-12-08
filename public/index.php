@@ -20,11 +20,11 @@ require_once dirname(__FILE__) . '/../bootstrap/autoload.php';
 |
 */
 
-$app = new Trace\App\App('Trace');
+$app = new Trace\Core\App('Trace');
 
-$class = new Trace\App\Inspector('Trace\App\App');
+$class = new Trace\Core\Helpers\Inspector('Trace\App\App');
 
 echo 'welcome to <i>' . $app->getName() . '</i>, version ' . $app->getVersion() . '<br><br>';
 
-$base = new Trace\App\Base();
+$base = new Trace\Core\Base();
 ?>
