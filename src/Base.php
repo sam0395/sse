@@ -1,7 +1,7 @@
 <?php
 namespace Trace\Core;
 
-use Trace\Core\Helpers\Inspector as Inspector;
+use Trace\Core\Inspector as Inspector;
 
 class Base
 {

@@ -22,9 +22,8 @@ require_once dirname(__FILE__) . '/../bootstrap/autoload.php';
 
 $app = new Trace\Core\App('Trace');
 
-$class = new Trace\Core\Helpers\Inspector('Trace\App\App');
+$class = new Trace\Core\Inspector('Trace\App\App');
 
 echo 'welcome to <i>' . $app->getName() . '</i>, version ' . $app->getVersion() . '<br><br>';
 
-$base = new Trace\Core\Base();
 ?>

@@ -1,5 +1,5 @@
 <?php
-namespace Trace\Core\Helpers;
+namespace Trace\Core;
 
 use Trace\Core\Helpers\Strings as Strings;
 use Trace\Core\Helpers\Arrays as Arrays;
