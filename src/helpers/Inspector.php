@@ -2,7 +2,7 @@
 namespace Trace\Core\Helpers;
 
 use Trace\Core\Helpers\Strings as Strings;
-use Trace\Core\\Helpers\Arrays as Arrays;
+use Trace\Core\Helpers\Arrays as Arrays;
 
 /*
 |------------------------------------------------------------
