@@ -18,15 +18,13 @@ require_once dirname(__FILE__) . '/../vendor/autoload.php';
 
 /*
 |------------------------------------------------------------
-| Create the cache
+| Register The main Application
 |------------------------------------------------------------
 |
-| Create a cache driver to store information to get faster load times
+| initialize the main application and load configurations
 |
 */
 
-$cache = new Trace\Core\Cache();
-
-$cache->store('app', "test");
+Trace\Core\Register::setInstance('app', new Trace\Core\App('Trace'));
 
 ?>
