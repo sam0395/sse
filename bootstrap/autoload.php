@@ -24,6 +24,9 @@ require_once dirname(__FILE__) . '/../vendor/autoload.php';
 | Create a cache driver to store information to get faster load times
 |
 */
+
 $cache = new Trace\Core\Cache();
+
+$cache->store('app', "test");
 
 ?>

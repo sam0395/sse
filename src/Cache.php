@@ -9,7 +9,7 @@ class Cache
 	*
 	* @var String
 	*/
-	private $_path = 'bootstrap/cache';
+	private $_path = 'bootstrap/cache/';
 
 	/**
 	* Cache file name
@@ -23,7 +23,7 @@ class Cache
 	*
 	* @var String
 	*/
-	private $extension = '.cache';
+	private $_extension = '.json';
 
 	/**
 	* Construct cache class
@@ -50,7 +50,9 @@ class Cache
 			'data'       => $data
 		);
 
-		$cache = $this->loadCache();
+		$cacheData = json_encode($data);
+	    file_put_contents($this->getCacheDir(), $cacheData);
+	    return $this;
 	}
 
 	/**
@@ -59,16 +61,63 @@ class Cache
 	*/
 	public function loadCache()
 	{
-
+		if (file_exists($this->getCacheDir())) {
+			return json_decode(file_get_contents($this->getCacheDir()));
+		}
+		return false;
 	}
 
 	/**
 	* Get the cache direcotry
 	*
-	*
+	* 
 	*/
-	public function _getChacheDir()
+	private function getCacheDir()
 	{
+		$filename = $this->getName();
+		
+		$filename = preg_replace('/[^0-9a-z\.\_\-]/i', '', strtolower($filename));
+		
+		return $this->getPath() . $this->hash($filename) . $this->getExtension();
+	}
 
+	/**
+	* Hash a string
+	*
+	* @return string
+	*/
+	private function hash($string)
+	{
+		return sha1($string);
+	}
+
+	/**
+	* Get the cache directory
+	*
+	* @return string 
+	*/
+	public function getPath()
+	{
+		return $this->_path;
+	}
+
+	/**
+	* Get the cache name
+	*
+	* @return string
+	*/
+	public function getName()
+	{
+		return $this->_name;
+	}
+
+	/**
+	* Get the cache extension
+	*
+	* @return string
+	*/
+	public function getExtension()
+	{
+		return $this->_extension;
 	}
 }
