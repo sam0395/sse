@@ -7,12 +7,12 @@ class Register
 
 	private function __construct()
 	{
-
+		// Prevent Construct
 	}
 
 	private function __clone()
 	{
-
+		// Prevent Clone
 	}
 
 	public static function getInstance($key, $default = null)
