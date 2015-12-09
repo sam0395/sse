@@ -16,4 +16,14 @@ if (!file_exists(dirname(__FILE__) . '/../vendor/autoload.php')) {
 
 require_once dirname(__FILE__) . '/../vendor/autoload.php';
 
+/*
+|------------------------------------------------------------
+| Create the cache
+|------------------------------------------------------------
+|
+| Create a cache driver to store information to get faster load times
+|
+*/
+$cache = new Trace\Core\Cache();
+
 ?>
