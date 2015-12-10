@@ -40,11 +40,7 @@ class Register
 	*/
 	public static function getInstance($key, $default = null)
 	{
-		if (isset(self::$instances[$key])) {
-			return self::$instances[$key];
-		}
-
-		return $default;
+		return self::has($key) : self::$instances[$key] ? $default;
 	}
 
 	/**
@@ -68,5 +64,16 @@ class Register
 	public static function destroy($key)
 	{
 		unset(self::$instances[$key]);
+	}
+
+	/**
+	* check if instance exists
+	*
+	* @param string $key
+	* @return boolean
+	*/
+	private static function has($key)
+	{
+		return isset(self::$instances[$key])
 	}
 }
