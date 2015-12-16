@@ -21,7 +21,8 @@
     "autoload": {
         "psr-4": {
             "Trace\\Core\\": "src",
-            "Trace\\Core\\Helpers\\": "src/helpers"
+            "Trace\\Core\\Helpers\\": "src/helpers",
+            "Trace\\Core\\ServiceProvider\\" : "src/ServiceProviders"
         }
     }
 }
