@@ -40,7 +40,7 @@ class Register
 	*/
 	public static function getInstance($key, $default = null)
 	{
-		return self::has($key) : self::$instances[$key] ? $default;
+		return self::has($key) ? self::$instances[$key] : $default;
 	}
 
 	/**
@@ -74,6 +74,6 @@ class Register
 	*/
 	private static function has($key)
 	{
-		return isset(self::$instances[$key])
+		return isset(self::$instances[$key]);
 	}
 }
