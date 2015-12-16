@@ -24,4 +24,10 @@ $app = Trace\Core\Register::getInstance('app');
 
 echo 'welcome to <i>' . $app->getName() . '</i>, version ' . $app->getVersion() . '<br><br>';
 
+use Trace\Core\Form as Form;
+
+Form::open('/login', array('class' => 'form-group'));
+Form::submit('login');
+Form::close();
+
 ?>
