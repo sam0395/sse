@@ -8,14 +8,15 @@ namespace Trace\Core;
 class Form
 {
 
-  private function __construct()
+  protected $html;
+
+  protected $options = ['class', 'method', 'files'];
+
+  protected $inputTypes = ['text', 'password', 'file', 'checkbox', 'radio'];
+
+  public function __construct()
   {
-
-  }
-
-  private function __clone()
-  {
-
+    
   }
 
   public static function open($url, $options = null)
@@ -35,7 +36,7 @@ class Form
     return print_r($html);
   }
 
-  public static function submit($title, $options = null)
+  public static function submit($title, array $options = null)
   {
     $button = '<button type="submit">';
     $button = $button . $title;
@@ -49,6 +50,7 @@ class Form
   {
     return '</form>';
   }
+
 }
 
 ?>
