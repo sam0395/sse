@@ -5,52 +5,58 @@
 
 namespace Trace\Core;
 
+use Trace\Core\Helpers\Html as Html;
+
 class Form
 {
 
-  protected $html;
-
-  protected $options = ['class', 'method', 'files'];
-
-  protected $inputTypes = ['text', 'password', 'file', 'checkbox', 'radio'];
-
-  public function __construct()
+  private function __construct()
   {
-    
-  }
-
-  public static function open($url, $options = null)
-  {
-    $html = '<form action="';
-
-    $html = $html . $url . '"';
-
-    if(isset($options['method']))
-      $html = $html . ' action="' . $options['method'] . '"';
-
-    if(isset($options['class']))
-      $$html = $html . ' class="' . $options['class'] . '"';
-
-    $html = $html . '>';
-
-    return print_r($html);
-  }
-
-  public static function submit($title, array $options = null)
-  {
-    $button = '<button type="submit">';
-    $button = $button . $title;
-    $button = $button . '</button>';
-
-    return print_r($button);
 
   }
 
-  public static function close()
+  private function __clone()
   {
-    return '</form>';
+
   }
 
+  public static function CreateLogin($url, $options = null)
+  {
+
+    $options['action'] = $url;
+
+    Html::CreateElement('form', $options);
+
+    return 0;
+  }
+
+  public static function Input($options = null)
+  {
+    if(isset($options))
+      Html::CreateElement('input', $options);
+    else
+      Html::CreateElement('input');
+
+    return 0;
+  }
+
+  public static function submit($options = null)
+  {
+
+    $options['type'] = 'submit';
+
+    Html::CreateElement('input', $options);
+
+    return 0;
+
+  }
+
+  public static function Close()
+  {
+    Html::CloseElement('form');
+
+    return 0;
+  }
 }
 
 ?>
