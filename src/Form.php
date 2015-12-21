@@ -5,37 +5,34 @@
 
 namespace Trace\Core;
 
-use Trace\Core\Helpers\Html as Html;
-
 class Form
 {
 
-  private function __construct()
+  protected $html;
+
+  public function __constructH(Html $html)
+  {
+    $this->html = $html;
+  }
+
+  public function __clone()
   {
 
   }
 
-  private function __clone()
-  {
-
-  }
-
-  public static function CreateLogin($url, $options = null)
+  public static function createLogin($url, $options = null)
   {
 
     $options['action'] = $url;
 
-    Html::CreateElement('form', $options);
+    $this->html->CreateElement('form', $options);
 
     return 0;
   }
 
-  public static function Input($options = null)
+  public static function input($options = null)
   {
-    if(isset($options))
-      Html::CreateElement('input', $options);
-    else
-      Html::CreateElement('input');
+    $this->html->CreateElement('input', $options);
 
     return 0;
   }
@@ -45,15 +42,15 @@ class Form
 
     $options['type'] = 'submit';
 
-    Html::CreateElement('input', $options);
+    $this->html->CreateElement('input', $options);
 
     return 0;
 
   }
 
-  public static function Close()
+  public static function close()
   {
-    Html::CloseElement('form');
+    $this->html->CloseElement('form');
 
     return 0;
   }
