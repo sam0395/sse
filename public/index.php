@@ -24,4 +24,8 @@ $app  = Trace\Core\Register::getInstance('app');
 
 echo 'welcome to <i>' . $app->getName() . '</i>, version ' . $app->getVersion() . '<br><br>';
 
+use Trace\Core\Model as Model;
+
+$model = new Model(1);
+
 ?>

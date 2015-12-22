@@ -7,17 +7,17 @@ namespace Trace\Core\Helpers;
 class Html
 {
 
-    public function __construct()
+    private function __construct()
     {
 
     }
 
-    public function __clone()
+    private function __clone()
     {
 
     }
 
-	  public function CreateElement($tag, $attributes = null)
+	  public static function CreateElement($tag, $attributes = null)
     {
 
       $html = array();
@@ -46,7 +46,7 @@ class Html
     }
 
 
-    public function Attributes($attributes)
+    public static function Attributes($attributes)
     {
       $html = array();
 
@@ -65,14 +65,14 @@ class Html
     }
 
 
-    public function CloseElement($tag)
+    public static function CloseElement($tag)
     {
 
       return print_r('</' . $tag . '>');
     }
 
 
-    public function IsSpecialElement($tag)
+    public static function IsSpecialElement($tag)
     {
       switch($tag)
       {

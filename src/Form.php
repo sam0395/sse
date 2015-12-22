@@ -20,7 +20,7 @@ class Form
 
   }
 
-  public static function createLogin($url, $options = null)
+  public static function open($url, $options = null)
   {
 
     $options['action'] = $url;
